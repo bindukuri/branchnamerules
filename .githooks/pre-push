@@ -11,7 +11,11 @@ valid_branch_regex="
 
 local_branch="$(git rev-parse --abbrev-ref HEAD)"
 
-message="There is something wrong with your branch name. Branch names in this project must adhere to use any of these patterns.feature/<JIRAID>-<SUMMARY>,bugfix/<JIRAID>-<SUMMARY>,hotfix/*,release/*,develop,main,master,integration/develop. You should rename your branch to a valid name and try again."
+message="There is something wrong with your branch name. 
+Branch names in this project must adhere to use any of these patterns.
+feature/<JIRAID>-<SUMMARY>,bugfix/<JIRAID>-<SUMMARY>,hotfix/*,release/*,develop,main,master,integration/develop. 
+You should rename your branch to a valid name and try again.
+To learn more refer this document https://edgewise.atlassian.net/wiki/spaces/INFRA/pages/3410657318/Valid+Branch+Naming+Conventions"
 
 for branch_regex in ${valid_branch_regex}; do
         if [[  $local_branch =~ $branch_regex ]]
