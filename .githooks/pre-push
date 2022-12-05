@@ -1,7 +1,7 @@
 #!/bin/sh
 
 valid_branch_regex="
-^(feature|bugfix)\/[A-Za-z]-[\d]+-[a-z0-9._-]+$
+^(feature|bugfix)\/[A-Za-z]-\d*-[a-z0-9._-]+$
 ^(release|hotfix)\/[a-z0-9._-]+$
 ^master+$
 ^develop+$
