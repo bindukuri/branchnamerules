@@ -23,5 +23,5 @@ for branch_regex in ${valid_branch_regex}; do
                 exit 0
         fi
 done
-echo "$message"
+echo "$message" >&2
 exit 1
